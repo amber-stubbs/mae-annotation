@@ -42,7 +42,7 @@ import javax.swing.table.DefaultTableModel;
  * 
  * 
  * @author Amber Stubbs 
- * @version 0.9.5 April 5, 2012
+ * @version 0.9.6 May 10, 2012
 */
 
 public class MaeGui extends JPanel {
@@ -332,7 +332,6 @@ public class MaeGui extends JPanel {
 	/**
 	 * Class that changes the size of the text from the top menu
 	 */
-	
 	private class DisplayListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			String action = e.getActionCommand();
@@ -363,7 +362,6 @@ public class MaeGui extends JPanel {
 	 * ID in order to see where that tag appears in the text.
 	 * 
 	 */
-
 	private class AnnTableModel extends DefaultTableModel{
 		static final long serialVersionUID = 552012L;
 		public boolean isCellEditable(int row, int col){
@@ -717,9 +715,10 @@ public class MaeGui extends JPanel {
 					int selectedRow = tab.getSelectedRow();
 					int startSelect = Integer.parseInt(((String)tab.getValueAt(selectedRow,1)));
 					int endSelect = Integer.parseInt(((String)tab.getValueAt(selectedRow,2)));
-
+					
 					try{
 						high.changeHighlight(high1,startSelect, endSelect);
+						displayAnnotation.scrollRectToVisible(displayAnnotation.modelToView(startSelect));
 					}catch (BadLocationException b) {
 					}
 				}//end if ElemExtent
@@ -737,6 +736,7 @@ public class MaeGui extends JPanel {
 						int endSelect = Integer.parseInt(locs[1]);
 						try{  
 							high.changeHighlight(high1,startSelect, endSelect+1);
+							displayAnnotation.scrollRectToVisible(displayAnnotation.modelToView(startSelect));
 						}catch(Exception ex){
 							System.out.println(ex);
 						}
