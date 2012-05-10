@@ -387,7 +387,14 @@ public class MaeGui extends JPanel {
 				String action = actionEvent.getActionCommand();
 				Elem elem = annotationTask.getElem(action);
 				JTable tab = elementTables.get(action);
-				int[] selectedRows = tab.getSelectedRows();
+				int[] selectedViewRows = tab.getSelectedRows();
+				
+				//convert the rows of the table view into the rows of the 
+				//table model so that the correct rows are deleted
+				int[] selectedRows = new int[selectedViewRows.length];
+				for (int i=0;i<selectedRows.length;i++){
+					selectedRows[i]=tab.convertRowIndexToModel(selectedViewRows[i]);
+				}
 
 				DefaultTableModel tableModel = (DefaultTableModel)tab.getModel();
 				//find the id column
