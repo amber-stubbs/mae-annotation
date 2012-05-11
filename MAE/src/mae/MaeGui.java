@@ -1529,7 +1529,7 @@ public class MaeGui extends JPanel {
 		about.setLocation(100,100);
 		about.setAlignmentX(Component.CENTER_ALIGNMENT);
 		about.setAlignmentY(Component.CENTER_ALIGNMENT);
-		about.setMessage("MAE \n Multi-purpose Annotation Editor \nVersion 0.9.4 \n\n" +
+		about.setMessage("MAE \n Multi-purpose Annotation Editor \nVersion 0.9.6 \n\n" +
 				"Copyright Amber Stubbs\nastubbs@cs.brandeis.edu \n Lab for " +
 				"Linguistics and Computation, Brandeis University 2010-2012." + 
 				"\n\nThis distribution of MAE (the software and the source code) \n" +
