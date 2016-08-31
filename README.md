@@ -10,3 +10,5 @@ MAE version 0.9.6 fixes a problem with deleting table entries encountered when s
 The Multi-document Adjudication Interface (MAI) is a companion program to MAE that allows you to create gold standard files from multiple annotations of the same document. MAI is available for download at http://code.google.com/p/mai-adjudication/.
 
 If you wish to cite MAE in a publication, please use: Amber Stubbs. "MAE and MAI: Lightweight Annotation and Adjudication Tools". In 2011 Proceedings of the Linguistic Annotation Workshop V, Association of Computational Linguistics, Portland, Oregon, July 23-24, 2011. 
+
+Please note that there is an updated version of MAE, with new functionality, created by Keigh Rim and other students at Brandeis University: https://github.com/keighrim/mae-annotation/ If you are looking to be able to do discontinuous spans, and a fancier UI, please check that out.
